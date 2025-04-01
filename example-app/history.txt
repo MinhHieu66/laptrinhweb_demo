@@ -25,7 +25,7 @@
    25  php artisan route:list | grep com wc -l
    26  php artisan route:list | grep com
    27  php artisan route:list | grep admin
-   28  php artisan route:list | grep admin/post
+   28  php artisan route:list | grep admin/post1111111
    29  php artisan make:middleware ABTest
    30  cd /d D:\1-github-workspace\1-tailieuweb
    31  git clone https://github.com/tailieuweb/training-wordpress.git 7-wordpress
