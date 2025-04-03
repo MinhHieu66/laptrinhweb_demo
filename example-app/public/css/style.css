@@ -1,0 +1,60 @@
+body {
+    position: relative;
+}
+
+.container-customize {
+    margin-top: 100px;
+    margin-bottom: 125px;
+}
+
+table > tr,
+th,
+td {
+    border: none !important;
+}
+
+/* list-users */
+.list-users table > tr,
+th {
+    border-bottom: 1px solid #ccc !important;
+    border-right: 1px solid #ccc !important;
+}
+
+.list-users table > tr,
+td {
+    border-right: 1px solid #ccc !important;
+}
+
+/* Login */
+.login table tr td {
+    border-right: none !important;
+}
+
+/* Register */
+.register table tr td {
+    border-right: none !important;
+}
+
+/* Update */
+.update table tr td {
+    border-right: none !important;
+}
+
+/* View */
+.view input {
+    border: none !important;
+    font-weight: bold !important;
+}
+
+.view table tr td {
+    border-right: none !important;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -320px;
+}

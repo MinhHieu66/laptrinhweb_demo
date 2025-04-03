@@ -28,11 +28,12 @@ class CrudUserController extends Controller
     public function authUser(Request $request)
     {
         $request->validate([
-            'email'    => 'required',
+            // 'email'    => 'required',
+            'name'     => 'required',
             'password' => 'required',
         ]);
 
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('name', 'password');
 
         if (Auth::attempt($credentials)) {
             return redirect()->intended('list')
