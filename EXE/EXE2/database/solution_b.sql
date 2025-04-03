@@ -81,3 +81,17 @@ WHERE o.total = (
     ) AS t
     WHERE t.user_id = o.user_id
 );
+
+10. WITH OrderTotals AS (
+    SELECT u.user_id, u.user_name, o.order_id, SUM(p.product_price) AS total_price,
+           COUNT(od.order_detail_id) AS product_count,
+           ROW_NUMBER() OVER (PARTITION BY u.user_id ORDER BY COUNT(od.order_detail_id) DESC) AS rn
+    FROM users u
+    JOIN orders o ON u.user_id = o.user_id
+    JOIN order_details od ON o.order_id = od.order_id
+    JOIN products p ON od.product_id = p.product_id
+    GROUP BY u.user_id, u.user_name, o.order_id
+)
+SELECT user_id, user_name, order_id, total_price, product_count
+FROM OrderTotals
+WHERE rn = 1;
