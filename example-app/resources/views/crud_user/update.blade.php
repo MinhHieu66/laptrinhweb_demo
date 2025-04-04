@@ -24,7 +24,7 @@
                 @endif
               </td>
             </tr>
-            <tr>
+            {{-- <tr>
               <td>Phone</td>
               <td>
                 <input type="text" value="{{ $user->phone }}" name="phone" id="phone" />
@@ -41,7 +41,7 @@
                     <span class="text-danger">{{ $errors->first('address') }}</span>
                 @endif
               </td>
-            </tr>
+            </tr> --}}
             <tr>
               <td>Mật khẩu</td>
               <td>
