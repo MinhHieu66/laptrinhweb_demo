@@ -79,24 +79,6 @@
                 @endif
               </td>
             </tr>
-            {{-- <tr>
-              <td>Phone</td>
-              <td>
-                <input type="text" name="phone" id="phone" />
-                @if ($errors->has('phone'))
-                    <span class="text-danger">{{ $errors->first('phone') }}</span>
-                @endif
-              </td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td>
-                <input type="text" name="address" id="address" />
-                @if ($errors->has('address'))
-                    <span class="text-danger">{{ $errors->first('address') }}</span>
-                @endif
-              </td>
-            </tr> --}}
             <tr>
               <td>Mật khẩu</td>
               <td>
