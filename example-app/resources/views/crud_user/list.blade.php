@@ -11,6 +11,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th>Order</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -26,6 +27,20 @@
                                             {{ $role->name . '-' }}
                                         </a>
                                     @endforeach
+                                </th>
+                                <th>
+                                    @if ($user->orders->isEmpty())
+                                    <p>Người dùng chưa có đơn hàng nào.</p>
+                                    @else
+                                    @foreach($user->orders as $order)
+                                        <a href="{{ route('order.product', ['id' => $order->id]) }}">{{ "Đơn hàng mã: " . $order->id }}</a>
+                                    @endforeach
+                                    @endif
+                                    {{-- @foreach($user->orders as $order)
+                                        <a href="{{ route('user.role', ['id' => $role->id]) }}">
+                                            {{ $role->name . '-' }}
+                                        </a>
+                                    @endforeach --}}
                                 </th>
                                 <th>
                                     <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |

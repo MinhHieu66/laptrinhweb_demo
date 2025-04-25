@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CrudUserController;
+use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,3 +40,5 @@ Route::get('/', function () {
 });
 
 Route::get('role', [RoleController::class, 'role'])->name('user.role');
+
+Route::get('product', [OrderDetailController::class, 'product'])->name('order.product');
