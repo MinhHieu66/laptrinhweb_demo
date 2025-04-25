@@ -28,18 +28,23 @@
             <table>
                 <thead>
                 <tr>
-                    {{-- <th>ID</th> --}}
+
                     <th>Name</th>
-                    {{-- <th>Email</th> --}}
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Mô tả</th>
                 </tr>
                 </thead>
                 <tbody>
 
                 @foreach($products as $product)
                     <tr>
-                        {{-- <th>{{$user->id}}</th> --}}
+
                         <th>{{$product->name}}</th>
-                        {{-- <th>{{$user->email}}</th> --}}
+                        <th>{{$product->price}}</th>
+                        <th>{{$product->quantity}}</th>
+                        <th>{{$product->description}}</th>
+
                     </tr>
                 @endforeach
                 </tbody>

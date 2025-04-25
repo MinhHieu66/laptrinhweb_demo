@@ -33,7 +33,7 @@
                                     <p>Người dùng chưa có đơn hàng nào.</p>
                                     @else
                                     @foreach($user->orders as $order)
-                                        <a href="{{ route('order.product', ['id' => $order->id]) }}">{{ "Đơn hàng mã: " . $order->id }}</a>
+                                        <a href="{{ route('order.product', ['id' => $order->id]) }}">{{ $order->id }}</a>
                                     @endforeach
                                     @endif
                                     {{-- @foreach($user->orders as $order)
